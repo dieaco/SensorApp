@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;	
+}
+
+label{
+	text-shadow:2px 2px 3px black;
+}
+
+.ui-header .ui-title{
+	font-size: 1.2em;
+}
+
+.login-form{
+	width: 100%;
+	margin: 10% auto; 
+	text-align: center;
+}
+
+#logo{
+	width: 100%;
+}
+
+#logo img{
+	width: 100%;
+}
+
+@media (min-width: 640px){
+	.login-form{		
+		width: 60%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.login-form{
+		margin: 1% auto;
+	}
+
+	#logo img{
+		width: 60%;
+	}	
+}

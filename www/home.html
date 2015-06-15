@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <link rel="stylesheet" href="css/themes/sentor-theme.min.css" />
+        <link rel="stylesheet" href="css/jquery-mobile.css">
+        <link rel="stylesheet" href="css/styleApp.css">
+
+        <title>Hello World</title>
+
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-mobile.js"></script>
+    </head>
+    <body>
+
+        <!--Inicia Página-->
+        <div data-role="page" data-theme="a" style="font-size:1.2em">
+
+            <!--Inicia Encabezado-->
+            <div data-role="header" class="myHeader">
+                <!-- <img class="nav-image" id="profilePictureHeader" class="nav-image" style="width:200px;height:200px;border-radius:200px;margin-top:10px; border:1px solid white;" alt="profile"> -->
+                <div id="profilePictureHeader" style="border-radius:200px;margin:10px auto;width:100px;height:100px; border:1px solid black"></div>
+                <h1>Perfil</h1>
+                <!--<a href="#" data-mini="true" class="ui-btn-right" id="btnLogout">Cerrrar Sesión</a>-->
+                <div data-role="navbar">
+                    <ul>
+                        <li id="profile"><a href="#" onclick="nav.profile()" data-theme="a"><img class="nav-image" src="img/user.png" alt="profile"><br>Perfil</a></li>
+                        <li id="solved"><a href="#" onclick="nav.solved()" data-theme="a"><img class="nav-image" src="img/checked.png" alt="solved"><br>Atendidos</a></li>
+                        <li id="new"><a href="#" onclick="nav.new()" data-theme="a"><img class="nav-image" src="img/new.png" alt="new"><br>Nuevos</a></li>
+                        <li id="logout"><a href="#" onclick="nav.logout()" data-theme="a"><img class="nav-image" src="img/logout.png" alt="settings"><br>Salir</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+
+            <!--Inicia Contenido-->
+            <div data-role="content">                
+                
+                <div id="profilePicture" style="border-radius:200px;margin:auto;width:200px;height:200px; border:1px solid black;position:relative;overflow:hidden;">
+                    <a href="">
+                        <div style="width:100%;height:30%;position:absolute;bottom:0; background:rgba(0,0,0,1);text-align:center;opacity:0.5;z-index:10000"><p style="color:white">Da click aquí</p></div>
+                    </a>
+                </div>
+                
+                <br>
+                <!--<button id="btnPhoto" ontouchend="capturePhoto()" data-mini="true">Captura</button>
+                <button id="btnGallery" ontouchend="getPhoto(pictureSource.PHOTOLIBRARY)" data-mini="true">Galería</button>-->
+            </div>            
+
+        </div>
+
+        <div id="deviceready" style="display:none">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>        
+
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="PushNotification.js"></script>
+        <script type="text/javascript" src="js/notificaciones.js"></script>
+        <script type="text/javascript" src="js/classNav.js"></script>
+        <script type="text/javascript">            
+
+            app.initialize();            
+            nav.compararRuta();
+            nav.loadProfilePicture();
+
+        </script>
+        <script type="text/javascript" src="js/md5.min.js"></script>
+    </body>
+</html>

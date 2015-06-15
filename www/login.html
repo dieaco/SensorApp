@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <link rel="stylesheet" href="css/themes/sentor-theme.min.css" />
+        <link rel="stylesheet" href="css/jquery-mobile.css">
+        <link rel="stylesheet" type="text/css" href="css/styleLogin.css" />
+
+        <title>Hello World</title>
+
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-mobile.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+
+    </head>
+    <body>
+
+        <!--Inicia Página-->
+        <div data-role="page" data-theme="a" style="font-size:1.2em">
+            <!--Inicia Encabezado-->
+            <!--<div data-role="header" data-theme="a">
+                <h1>HOLA</h1>
+            </div>-->
+            <!--Inicia Contenido-->
+
+            <div data-role="content">                
+                <div class="login-form">
+                    <span style="display:none;border-radius:10px;text-align:center;padding: 5px; font-size:1.5em; background:rgba(255, 255, 255,.3); text-shadow:2px 2px 4px black;">SensorApp</span><br><br><br>
+                    <img src="img/logo-sensor50.png" alt="logo-sensor50" style="opacity:.7"><br><br>
+                    <div id="logo">
+                        <img id="logo" src="img/logo.png" alt="logo">
+                    </div>
+                    <br>
+                    <form action="#" name="form-login" id="form-login">
+                        <label for="Usuario">Usuario:</label>
+                        <input type="email" name="txtUsuario" id="txtUsuario" placeholder="E-mail" onfocus="usernameFocus=1" onblur="usernameFocus=0" autofocus>
+                        <label for="Contraseña">Contraseña:</label>
+                        <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" onfocus="passwordFocus=1" onblur="passwordFocus=0">
+                        <label for="RegId">Registration ID:</label>
+                        <input type="text" name="txtRegId" id="txtRegId" readonly="readonly" placeholder="Cargando RegID..."><br>
+                        <input type="hidden" name="idUsuario" id="idUsuario">
+                        <input data-theme="a" type="checkbox" id="cbGuardar" name="cbGuardar"><label for="Guardar"> Deseo mantener mi sesión abierta</label><br><br>
+                        <input type="button" name="btnLogin" id="btnLogin" value="Iniciar Sesión">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="deviceready" style="display:none">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Device is Ready</p>
+        </div>        
+
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="PushNotification.js"></script>
+        <script type="text/javascript" src="js/notificaciones.js"></script>
+        <script type="text/javascript">            
+
+            app.initialize();  
+
+            function toggle(){
+                $('.login-form span').fadeIn(1000);
+            }
+            toggle();
+
+        </script>
+        <script type="text/javascript" src="js/md5.min.js"></script>
+    </body>
+</html>

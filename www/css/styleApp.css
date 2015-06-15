@@ -1,0 +1,25 @@
+*{
+	margin: 0;
+	padding: 0;	
+}
+
+.ui-header .ui-title{
+	font-size: 2em;
+}
+
+.ui-btn-text{
+	font-size: 1.8em;
+}
+
+.nav-image{
+	width: 80px;
+}
+
+.myHeader{	
+	color: white;
+	text-shadow:1px 1px 4px rgba(0,0,0,.7);
+	background: -webkit-linear-gradient(#19355E, #001C44, #00132E, #000917,#00132E, #001C44, #19355E);
+	padding: 0px 0px;
+	text-align: center;
+	overflow: hidden;
+}
