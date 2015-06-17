@@ -55,9 +55,7 @@ var nav = {
                 localStorage.removeItem("idUsuarioLocal");
                 localStorage.removeItem("cbGuardarStatus");
 
-                  location.href = "login.html"; 
-
-                alert("Sesión finalizada: "+ data); 
+                  location.href = "login.html";
            },
            error: function()
            {

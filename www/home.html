@@ -41,13 +41,73 @@
                 
                 <div id="profilePicture" style="border-radius:200px;margin:auto;width:200px;height:200px; border:1px solid black;position:relative;overflow:hidden;">
                     <a href="">
-                        <div style="width:100%;height:30%;position:absolute;bottom:0; background:rgba(0,0,0,1);text-align:center;opacity:0.5;z-index:10000"><p style="color:white">Da click aquí</p></div>
+                        <div style="width:100%;height:30%;position:absolute;bottom:0;text-align:center;z-index:10000"><p style="font-size:.8em;color:white">Cambiar Imágen</p><img src="img/camera.png" alt="camera"></div>
                     </a>
                 </div>
                 
                 <br>
                 <!--<button id="btnPhoto" ontouchend="capturePhoto()" data-mini="true">Captura</button>
                 <button id="btnGallery" ontouchend="getPhoto(pictureSource.PHOTOLIBRARY)" data-mini="true">Galería</button>-->
+
+                <a data-role="button" data-mini="true" data-inline="true" id="btnEditar"><p  style="font-size:.9em">Editar Perfil</p></a>
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Nombres:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Apellidos:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>RFC:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Teléfono:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>E-mail:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Banco:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Número de Cuenta:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Número de Seguro Social:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Dirección:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Estado:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Municipio:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Área:</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Status:</th>
+                            <td><span></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>            
 
         </div>
@@ -61,6 +121,7 @@
         <script type="text/javascript" src="PushNotification.js"></script>
         <script type="text/javascript" src="js/notificaciones.js"></script>
         <script type="text/javascript" src="js/classNav.js"></script>
+        <script type="text/javascript" src="js/funciones.js"></script>
         <script type="text/javascript">            
 
             app.initialize();            
