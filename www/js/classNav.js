@@ -21,15 +21,31 @@ var nav = {
         switch(nav.checkRelativeRoot()){
             case "home.html":
                 $('#profile a').addClass('ui-btn-active');
+                localStorage.removeItem('idEdoLocal');
+                localStorage.removeItem('idMunicipioLocal');
+                localStorage.removeItem('idAreaLocal');
+                localStorage.removeItem('idBancoLocal');
                 break;
             case "finishedServices.html":
                 $('#solved a').addClass('ui-btn-active');
+                localStorage.removeItem('idEdoLocal');
+                localStorage.removeItem('idMunicipioLocal');
+                localStorage.removeItem('idAreaLocal');
+                localStorage.removeItem('idBancoLocal');
                 break;
             case "newServices.html":
                 $('#new a').addClass('ui-btn-active');
+                localStorage.removeItem('idEdoLocal');
+                localStorage.removeItem('idMunicipioLocal');
+                localStorage.removeItem('idAreaLocal');
+                localStorage.removeItem('idBancoLocal');
                 break;
             case "logout.html":
                 $('#logout a').addClass('ui-btn-active');
+                localStorage.removeItem('idEdoLocal');
+                localStorage.removeItem('idMunicipioLocal');
+                localStorage.removeItem('idAreaLocal');
+                localStorage.removeItem('idBancoLocal');
                 break;
         }
     }, 
