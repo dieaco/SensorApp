@@ -98,6 +98,9 @@ var nav = {
                 //document.getElementById("profilePictureHeader").src = item.picture;
                 document.getElementById("profilePictureHeader").style.backgroundImage="url('"+finalPicture+"')";
                 document.getElementById("profilePictureHeader").style.backgroundSize="100% 100%";
+
+                document.getElementById("profilePictureEdit").style.backgroundImage="url('"+finalPicture+"')";
+                document.getElementById("profilePictureEdit").style.backgroundSize="100% 100%";
                 });
             });
     },

@@ -40,8 +40,8 @@
             <div data-role="content">                
                 
                 <div id="profilePicture" style="border-radius:200px;margin:auto;width:200px;height:200px; border:1px solid black;position:relative;overflow:hidden;">
-                    <a href="">
-                        <div style="width:100%;height:30%;position:absolute;bottom:0;text-align:center;z-index:10000"><p style="font-size:.8em;color:white">Cambiar Imágen</p><img src="img/camera.png" alt="camera"></div>
+                    <a href="#camera-dialog" data-rel="dialog" data-transition="flip">
+                        <div style="width:100%;height:30%;position:absolute;bottom:0;text-align:center;z-index:10000"><p style="font-size:.8em;color:white;"><span style="background:rgba(0,0,0,.5);padding:.15em;border-radius:10px;">Cambiar Imágen</span></p><img src="img/camera.png" alt="camera"></div>
                     </a>
                 </div>
                 
@@ -116,9 +116,35 @@
                     </tbody>
                 </table>
 
-            </div>            
+            </div><!--Termina contenido-->            
 
-        </div>
+        </div><!--Termina Página-->
+
+        <!--Inicia Cuadro de Diálogo-->
+        <div data-role="page" id="camera-dialog" data-close-btn="none">
+
+            <!--Inicia Encabezado-->
+            <div data-role="header" class="myHeader" data-theme="a">
+                <h3>Imágen</h3>
+            </div><!--Termina Encabezado-->
+
+            <!--Inicia Contenido-->
+            <div data-role="content" data-theme="a">
+                <!--Contenedor de la imágen-->
+                <div id="profilePictureEdit" style="border-radius:200px;margin:1em auto;width:200px;height:200px; border:1px solid black;position:relative;overflow:hidden;">
+                    <a href="home.html" data-transition="flip" id="btnSavePhoto" ontouchend="saveImageOnServer()">
+                        <div style="display:none;width:100%;height:30%;position:absolute;bottom:0;text-align:center;z-index:10000"><p style="font-size:.8em;color:white"><span style="background:rgba(0,0,0,.5);padding:.15em;border-radius:10px;">Guardar Imágen</span></p><img src="img/camera.png" alt="camera"></div>
+                    </a>
+                </div><!--Termina contenedor de la imágen-->
+
+                <!--Botones para cargar imágen-->
+                <button id="btnPhoto" ontouchend="capturePhoto();" data-mini="true">Captura</button>
+                <a href="home.html" data-rel="back" data-role="button" data-mini="true">Cancelar</a>
+                <!--<button id="btnGallery" ontouchend="getPhoto(pictureSource.PHOTOLIBRARY)" data-mini="true">Galería</button>-->
+
+            </div><!--Termina Contenido-->
+
+        </div><!--Termina Cuadro de Diálogo-->
 
         <div id="deviceready" style="display:none">
             <p class="event listening">Connecting to Device</p>
@@ -134,7 +160,14 @@
 
             app.initialize();            
             nav.compararRuta();
-            nav.loadProfilePicture();
+            nav.loadProfilePicture();   
+
+            /*window.addEventListener('load', function(){                
+                $('#btnPhoto').click(function(event) {
+                    alert('hola');
+                });
+            });        */
+
 
         </script>
         <script type="text/javascript" src="js/md5.min.js"></script>

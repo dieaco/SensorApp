@@ -278,6 +278,8 @@ var app = {
 };
 
 function capturePhoto() {
+    $('#btnSavePhoto div').css('display', 'block'); 
+
     navigator.camera.getPicture(onSuccess, onFail, { quality: 60,
         destinationType: Camera.DestinationType.FILE_URI,
         correctOrientation: true,
@@ -286,26 +288,32 @@ function capturePhoto() {
     });
 }
 
-function getPhoto(source) {
+/*function getPhoto(source) {
     navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 35,
         destinationType: destinationType.FILE_URI,
         targetWidth: 500,
         targetHeight: 500,
         sourceType: source });
-}
+}*/
 
 function onSuccess(imageURI) {
-    document.getElementById("profilePicture").style.backgroundImage="url('"+imageURI+"')";
-    document.getElementById("profilePicture").style.backgroundSize="100% 100%";  
+    document.getElementById("profilePictureEdit").style.backgroundImage="url('"+imageURI+"')";
+    document.getElementById("profilePictureEdit").style.backgroundSize="100% 100%";  
 
-    //document.getElementById("profilePictureHeader").src = imageURI; 
-    document.getElementById("profilePictureHeader").style.backgroundImage="url('"+imageURI+"')";
-    document.getElementById("profilePictureHeader").style.backgroundSize="100% 100%";
+    localStorage.setItem('imageUriLocal', imageURI);
     
-    uploadImages(imageURI);
+    //uploadImages(imageURI);
 }
 
-function onPhotoURISuccess(imageURI) {
+function saveImageOnServer(){
+    var imageUriLocal = localStorage.getItem('imageUriLocal');
+
+    uploadImages(imageUriLocal);
+
+    window.location.href = "home.html";
+}
+
+/*function onPhotoURISuccess(imageURI) {
     document.getElementById("profilePicture").style.backgroundImage="url('"+imageURI+"')";
     document.getElementById("profilePicture").style.backgroundSize="100% 100%";
 
@@ -314,7 +322,7 @@ function onPhotoURISuccess(imageURI) {
     document.getElementById("profilePictureHeader").style.backgroundSize="100% 100%";
 
     uploadImages(imageURI);
-}
+}*/
 
 function uploadImages(image){
     var idEmpleado = localStorage.getItem("idUsuarioLocal");
